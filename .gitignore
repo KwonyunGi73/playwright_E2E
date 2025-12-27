@@ -1,30 +1,33 @@
 # Dependencies
 node_modules/
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
 
-# Playwright
-test-results/
-playwright-report/
-playwright/.cache/
+# Playwright (결과물 및 보안 파일 무시)
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# ★★★ [보안 필수] 인증 정보 절대 올리지 않기 ★★★
+/playwright/.auth/
+**/.auth/
+user.json
 
 # TypeScript
 dist/
 *.tsbuildinfo
 
-# IDE
+# IDE (에디터 설정 파일)
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS
+# OS (운영체제 파일)
 .DS_Store
 Thumbs.db
 
-# Environment variables
+# Environment variables (환경변수)
 .env
 .env.local
 .env.*.local
@@ -38,9 +41,3 @@ yarn-error.log*
 # Coverage
 coverage/
 .nyc_output/
-
-# Playwright
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
